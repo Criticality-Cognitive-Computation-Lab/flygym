@@ -26,6 +26,7 @@ setup(
         "jupyter",
         "mediapy",
         "imageio",
+        "opencv-python-headless>=4.8,<4.12",
         "imageio[pyav]",
         "imageio[ffmpeg]",
         "tqdm",

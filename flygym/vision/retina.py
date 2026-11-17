@@ -5,6 +5,11 @@ from typing import Optional
 from flygym.util import get_data_path, load_config
 
 
+def blow_hw(x, col_repeats=2, row_repeats=2):
+    """Repeat columns and rows requested number of times."""
+    return np.repeat(np.repeat(x, row_repeats, axis=0), col_repeats, axis=1)
+
+
 class Retina:
     """
     This class handles the simulation of the fly's visual input.
@@ -102,6 +107,7 @@ class Retina:
         self.zoom = zoom
         self.nrows = nrows
         self.ncols = ncols
+        self._geoms_to_hide = config["vision"]["flybody_hidden_geoms"]
 
     def raw_image_to_hex_pxls(self, raw_img: np.ndarray) -> np.ndarray:
         """Given a raw image from an eye (one camera), simulate what the

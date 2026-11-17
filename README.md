@@ -71,3 +71,14 @@ If you use NeuroMechFly in your work, please cite the following papers:
   journal = {Nature Methods}
 }
 ```
+## Lab sensory/model branch
+
+`dev_fly_env` is based on FlyGym v1.1.0
+(`2931ed7500ab0bb490f9dd34772385fa9eae37a4`). It carries the NeuroMechFly XML
+variants formerly used by `Criticality-Cognitive-Computation-Lab/017_fruit_fly`
+dev `7491d163`, plus FlyBody's hidden-geometry list and image-repeat helper.
+The original vendoring checkout hash was not recorded; the baseline is
+content-matched. Both retina arrays and all 71 STL meshes match this upstream
+base exactly. Retina numerical methods retain upstream behavior. Body XML
+changes preserve the existing lab models; only mesh paths change for packaging.
+The FlyBody environment is provided by the matching FlyBody `dev_fly_env` fork.
